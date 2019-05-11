@@ -97,6 +97,43 @@ input.onButtonPressed(Button.A, function () {
         RobotImp.Init()
         basic.clearScreen()
     }
+    basic.pause(2000)
+    if (input.buttonIsPressed(Button.B)) {
+        let count = 0
+        basic.showString('Demo')
+        while (1) {
+            count += 1
+            basic.showNumber(count)
+            RobotImp.LEDBlink(2)
+            RobotImp.RGBAllOn(NeoPixelColors.Indigo)
+            CmdSetSpeed(50)
+            CmdForward(true, 2000, 200, 200)
+            basic.pause(2000)
+            RobotImp.RGBAllOn(NeoPixelColors.Red)
+            CmdLeft(750)
+            basic.pause(750)
+            RobotImp.RGBAllOn(NeoPixelColors.Blue)
+            CmdForward(true, 2000, 200, 200)
+            basic.pause(2000)
+            RobotImp.RGBAllOn(NeoPixelColors.Purple)
+            CmdLeft(750)
+            basic.pause(750)
+            RobotImp.RGBAllOn(NeoPixelColors.Orange)
+            CmdForward(true, 2000, 200, 200)
+            basic.pause(2000)
+            RobotImp.RGBAllOn(NeoPixelColors.Green)
+            CmdLeft(750)
+            basic.pause(750)
+            RobotImp.RGBAllOn(NeoPixelColors.White)
+            CmdForward(true, 2000, 200, 200)
+            basic.pause(2000)
+            RobotImp.RGBAllOn(NeoPixelColors.Violet)
+            CmdLeft(750)
+            basic.pause(750)
+            RobotImp.RGBAllOff()
+        }
+        //demo
+    }
 })
 
 input.onButtonPressed(Button.B, function () {
